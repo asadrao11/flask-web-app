@@ -6,7 +6,9 @@
     "prod_uri": "mysql://phpmyadminuser:Pakistan12345@@localhost/cloudexperts",
     "fb_url": "https://facebook.com/cloudexperts",
     "tw_url": "https://twitter.com/cloudexperts",
-    "gh_url": "https://github.com/cloudexperts"
+    "gh_url": "https://github.com/cloudexperts",
+    "blog_name": "Cloud Experts",
+    "tag_line": "The blog liked by Cloud Solutions Architects!"
 
 
 
