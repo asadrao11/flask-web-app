@@ -1,10 +1,19 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
 import json
+from datetime import datetime
 
+
+with open('config.json', 'r') as c:
+    params = json.load(c)["params"]
+
+local_server = True
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://phpmyadminuser:Pakistan12345@@localhost/cloudexperts'
+if(local_server):
+    app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
+
 db = SQLAlchemy(app)
 
 class Contacts(db.Model):
